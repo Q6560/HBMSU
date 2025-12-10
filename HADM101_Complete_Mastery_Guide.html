@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HADM101 Medical Terminology - Complete Mastery Guide</title>
+    <style>
+        @page {
+            size: A4 portrait;
+            margin: 12mm 10mm;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 10pt;
+            line-height: 1.4;
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        .main-header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3a6f 100%);
+            color: white;
+            border-radius: 8px;
+        }
+        .main-header h1 {
+            font-size: 18pt;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .main-header p {
+            font-size: 11pt;
+            opacity: 0.95;
+        }
+        .intro-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        .intro-box {
+            padding: 15px;
+            background: #f0f7ff;
+            border-left: 4px solid #2c5aa0;
+            border-radius: 4px;
+        }
+        .intro-box h3 {
+            font-size: 11pt;
+            color: #2c5aa0;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .intro-box h3 .emoji {
+            margin-right: 8px;
+            font-size: 14pt;
+        }
+        .definition-box {
+            background: #e8f4f8;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 9.5pt;
+            line-height: 1.35;
+        }
+        .definition-box strong {
+            color: #1e3a6f;
+        }
+        .term-card-section {
+            margin-bottom: 25px;
+        }
+        .term-card-section h2 {
+            font-size: 13pt;
+            color: #2c5aa0;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #2c5aa0;
+        }
+        .term-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .term-card {
+            background: #fff9e6;
+            border: 2px solid #f39c12;
+            border-radius: 6px;
+            padding: 15px;
+        }
+        .term-card h4 {
+            font-size: 11pt;
+            color: #d68910;
+            margin-bottom: 10px;
+        }
+        .term-display {
+            background: white;
+            padding: 12px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 13pt;
+            font-weight: 600;
+            color: #1e3a6f;
+            margin: 10px 0;
+            border: 1px solid #f39c12;
+        }
+        .term-card .context {
+            background: #e8f4f8;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-size: 9.5pt;
+            line-height: 1.35;
+        }
+        .term-card .context strong {
+            color: #2c5aa0;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 9.5pt;
+        }
+        .comparison-table th {
+            background: #2c5aa0;
+            color: white;
+            padding: 10px 8px;
+            text-align: left;
+            font-weight: 600;
+            border: 1px solid white;
+        }
+        .comparison-table td {
+            padding: 8px;
+            border: 1px solid #ccc;
+            vertical-align: top;
+            font-size: 9pt;
+            line-height: 1.3;
+        }
+        .comparison-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        .example-box {
+            background: #fff9e6;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .example-box .example-header {
+            font-size: 11pt;
+            font-weight: 700;
+            color: #d68910;
+            margin-bottom: 12px;
+        }
+        .result-box {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            padding: 12px;
+            border-radius: 4px;
+            margin-top: 10px;
+            font-weight: 600;
+            color: #2e7d32;
+            font-size: 10pt;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .info-box {
+            background: #f5f5f5;
+            border-left: 4px solid #2c5aa0;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        .info-box h4 {
+            font-size: 10.5pt;
+            color: #2c5aa0;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .info-box p {
+            font-size: 9.5pt;
+            line-height: 1.35;
+        }
+        .chapter-separator {
+            page-break-before: always;
+            margin: 60px 0 40px 0;
+            border-top: 3px solid #ddd;
+            padding-top: 20px;
+        }
+        .scenario-box {
+            background: #fce4ec;
+            border-left: 4px solid #c2185b;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+        .scenario-box h4 {
+            color: #c2185b;
+            font-size: 11pt;
+            margin-bottom: 10px;
+        }
+        .scenario-box p {
+            font-size: 9.5pt;
+            line-height: 1.4;
+        }
+        .formula-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .formula-box h4 {
+            color: #e65100;
+            font-size: 11pt;
+            margin-bottom: 10px;
+        }
+        .formula-box p {
+            font-size: 10pt;
+            line-height: 1.4;
+        }
+        @media print {
+            body {
+                padding: 0;
+            }
+            .intro-section, .term-grid, .info-grid {
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- CRITICAL SUCCESS FORMULAS -->
+<div class="main-header">
+    <h1>🎯 Critical Success Formulas</h1>
+    <p>Master these formulas to unlock medical terminology</p>
+</div>
+<div class="formula-box">
+    <h4>Master Thesis #1: HYPER vs HYPO</h4>
+    <p><strong>HYPER</strong> = HIGH, EXCESSIVE, ABOVE | <strong>HYPO</strong> = LOW, DEFICIENT, BELOW</p>
+    <p>Example: <strong>Hypertension</strong> (high BP >140/90) vs <strong>Hypotension</strong> (low BP <90/60)</p>
+</div>
+<div class="formula-box">
+    <h4>Master Thesis #2: BRADY vs TACHY</h4>
+    <p><strong>BRADY</strong> = SLOW | <strong>TACHY</strong> = FAST, RAPID</p>
+    <p>Example: <strong>Bradycardia</strong> (heart rate <60 bpm) vs <strong>Tachycardia</strong> (heart rate >100 bpm)</p>
+</div>
+<div class="formula-box">
+    <h4>Master Thesis #3: ECTOMY vs OTOMY</h4>
+    <p><strong>ECTOMY</strong> = SURGICAL REMOVAL (complete) | <strong>OTOMY</strong> = SURGICAL INCISION (cutting into)</p>
+    <p>Example: <strong>Cholecystectomy</strong> (remove gallbladder) vs <strong>Tracheotomy</strong> (cut into trachea)</p>
+</div>
+<div class="formula-box">
+    <h4>Master Thesis #4: ILEUM vs ILIUM</h4>
+    <p><strong>ILEUM</strong> = Part of small intestine | <strong>ILIUM</strong> = Part of hip bone</p>
+    <p>Example: <strong>Ileitis</strong> (inflammation of small intestine) vs <strong>Iliac artery</strong> (artery near hip bone)</p>
+</div>
+<div class="formula-box">
+    <h4>Word Decoding Formula: PREFIX + ROOT + SUFFIX = MEANING</h4>
+    <p><strong>Example:</strong> Gastroenteritis = Gastr(stomach) + enter(intestine) + itis(inflammation) = Stomach/intestine inflammation</p>
+    <p><strong>Example:</strong> Hypoglycemia = Hypo(low) + glyc(sugar) + emia(blood condition) = Low blood sugar</p>
+</div>
+
+<!-- WORD PARTS -->
+<div class="chapter-separator"></div>
+<div class="main-header">
+    <h1>🧩 Medical Word Parts: The Building Blocks</h1>
+    <p>Understanding prefixes, roots, and suffixes is the key to decoding any medical term.</p>
+</div>
+<div class="intro-section">
+    <div class="intro-box"><h3><span class="emoji">➡️</span>Prefixes</h3><div class="definition-box"><strong>Function:</strong> Placed at the beginning of a word to modify its meaning.</div><div class="definition-box"><strong>Scope:</strong> Usually indicates location, quantity, status, or time.</div></div>
+    <div class="intro-box"><h3><span class="emoji">❤️</span>Root Words</h3><div class="definition-box"><strong>Function:</strong> The core of the word, providing its fundamental meaning.</div><div class="definition-box"><strong>Scope:</strong> Usually indicates a body part, organ, or function.</div></div>
+    <div class="intro-box"><h3><span class="emoji">⬅️</span>Suffixes</h3><div class="definition-box"><strong>Function:</strong> Placed at the end of a word to complete its meaning.</div><div class="definition-box"><strong>Scope:</strong> Usually indicates a procedure, condition, disease, or action.</div></div>
+</div>
+
+<div class="term-card-section">
+    <h2>All Prefixes (Location, Quantity, Status)</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Prefix</th><th>Meaning</th><th>Examples</th><th>Clinical Context</th></tr></thead>
+        <tbody>
+            <tr><td>hyper-</td><td>Above, excessive, high</td><td>Hypertension, hyperglycemia</td><td>Patient has elevated levels</td></tr>
+            <tr><td>hypo-</td><td>Below, deficient, low</td><td>Hypotension, hypoglycemia</td><td>Patient has decreased levels</td></tr>
+            <tr><td>brady-</td><td>Slow</td><td>Bradycardia</td><td>Heart rate <60 bpm</td></tr>
+            <tr><td>tachy-</td><td>Fast, rapid</td><td>Tachycardia</td><td>Heart rate >100 bpm</td></tr>
+            <tr><td>dys-</td><td>Difficult, painful, abnormal</td><td>Dysphagia, dyspnea</td><td>Patient struggles with function</td></tr>
+            <tr><td>a-, an-</td><td>Without, absence of</td><td>Anemia, apnea</td><td>Complete lack of something</td></tr>
+            <tr><td>bi-</td><td>Two</td><td>Bilateral, bicuspid</td><td>Affects both sides</td></tr>
+            <tr><td>uni-</td><td>One</td><td>Unilateral</td><td>Affects one side</td></tr>
+            <tr><td>poly-</td><td>Many, excessive</td><td>Polyuria, polydipsia</td><td>Multiple or excessive occurrences</td></tr>
+            <tr><td>sub-</td><td>Under, below</td><td>Subcutaneous, sublingual</td><td>Beneath surface</td></tr>
+            <tr><td>super-, supra-</td><td>Above, over</td><td>Suprapubic</td><td>Above normal position</td></tr>
+            <tr><td>inter-</td><td>Between</td><td>Intercostal</td><td>Between structures</td></tr>
+            <tr><td>intra-</td><td>Within</td><td>Intramuscular, intravenous</td><td>Inside structure</td></tr>
+            <tr><td>extra-</td><td>Outside</td><td>Extracellular</td><td>Outside normal location</td></tr>
+            <tr><td>pre-</td><td>Before</td><td>Prenatal, preoperative</td><td>Prior to event</td></tr>
+            <tr><td>post-</td><td>After</td><td>Postoperative, postpartum</td><td>Following event</td></tr>
+            <tr><td>anti-</td><td>Against</td><td>Antibiotic, antihypertensive</td><td>Works against condition</td></tr>
+            <tr><td>pro-</td><td>Forward, in favor of</td><td>Prognosis</td><td>Moving toward outcome</td></tr>
+            <tr><td>peri-</td><td>Around</td><td>Pericardium, peritoneum</td><td>Surrounding structure</td></tr>
+            <tr><td>trans-</td><td>Through, across</td><td>Transdermal, transplant</td><td>Crossing boundaries</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="term-card-section">
+    <h2>All Root Words (Body Parts and Functions)</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Root</th><th>Meaning</th><th>Examples</th><th>Body System</th></tr></thead>
+        <tbody>
+            <tr><td>cardi/o</td><td>Heart</td><td>Cardiology, cardiomegaly</td><td>Cardiovascular</td></tr>
+            <tr><td>angi/o</td><td>Vessel</td><td>Angioplasty, angiogram</td><td>Cardiovascular</td></tr>
+            <tr><td>hem/o, hemat/o</td><td>Blood</td><td>Hematology, hemorrhage</td><td>Cardiovascular</td></tr>
+            <tr><td>thromb/o</td><td>Clot</td><td>Thrombosis, thrombolytic</td><td>Cardiovascular</td></tr>
+            <tr><td>gastr/o</td><td>Stomach</td><td>Gastritis, gastroenterology</td><td>Digestive</td></tr>
+            <tr><td>enter/o</td><td>Intestine</td><td>Enteritis, gastroenteritis</td><td>Digestive</td></tr>
+            <tr><td>hepat/o</td><td>Liver</td><td>Hepatitis, hepatology</td><td>Digestive</td></tr>
+            <tr><td>cholecyst/o</td><td>Gallbladder</td><td>Cholecystitis, cholecystectomy</td><td>Digestive</td></tr>
+            <tr><td>pancreat/o</td><td>Pancreas</td><td>Pancreatitis, pancreatectomy</td><td>Digestive</td></tr>
+            <tr><td>col/o, colon/o</td><td>Colon</td><td>Colitis, colonoscopy</td><td>Digestive</td></tr>
+            <tr><td>derm/o, dermat/o</td><td>Skin</td><td>Dermatology, dermatitis</td><td>Integumentary</td></tr>
+            <tr><td>cutane/o</td><td>Skin</td><td>Subcutaneous</td><td>Integumentary</td></tr>
+            <tr><td>kerat/o</td><td>Hard tissue</td><td>Keratosis</td><td>Integumentary</td></tr>
+            <tr><td>melan/o</td><td>Black, dark</td><td>Melanoma</td><td>Integumentary</td></tr>
+            <tr><td>trich/o</td><td>Hair</td><td>Trichotillomania</td><td>Integumentary</td></tr>
+            <tr><td>onych/o</td><td>Nail</td><td>Onychomycosis</td><td>Integumentary</td></tr>
+            <tr><td>thyr/o, thyroid/o</td><td>Thyroid</td><td>Thyroiditis, hyperthyroidism</td><td>Endocrine</td></tr>
+            <tr><td>adren/o</td><td>Adrenal glands</td><td>Adrenalitis</td><td>Endocrine</td></tr>
+            <tr><td>glyc/o</td><td>Glucose, sugar</td><td>Glycosuria, hyperglycemia</td><td>Endocrine</td></tr>
+            <tr><td>gonad/o</td><td>Sex glands</td><td>Hypogonadism</td><td>Endocrine</td></tr>
+            <tr><td>neur/o</td><td>Nerve</td><td>Neurology, neuropathy</td><td>Nervous</td></tr>
+            <tr><td>psych/o</td><td>Mind</td><td>Psychology, psychiatry</td><td>Nervous</td></tr>
+            <tr><td>pulmon/o, pneum/o</td><td>Lung</td><td>Pulmonology, pneumonia</td><td>Respiratory</td></tr>
+            <tr><td>rhin/o</td><td>Nose</td><td>Rhinitis</td><td>Respiratory</td></tr>
+            <tr><td>nephr/o, ren/o</td><td>Kidney</td><td>Nephrology, renal</td><td>Urinary</td></tr>
+            <tr><td>ur/o</td><td>Urine</td><td>Urology, urinalysis</td><td>Urinary</td></tr>
+            <tr><td>oste/o</td><td>Bone</td><td>Osteoporosis, osteology</td><td>Musculoskeletal</td></tr>
+            <tr><td>arthr/o</td><td>Joint</td><td>Arthritis, arthroscopy</td><td>Musculoskeletal</td></tr>
+            <tr><td>my/o</td><td>Muscle</td><td>Myocardial, myopathy</td><td>Musculoskeletal</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="term-card-section">
+    <h2>All Suffixes (Actions, Conditions, Procedures)</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Suffix</th><th>Meaning</th><th>Examples</th><th>When Used</th></tr></thead>
+        <tbody>
+            <tr><td>-itis</td><td>Inflammation</td><td>Gastritis, dermatitis</td><td>Inflammatory conditions</td></tr>
+            <tr><td>-osis</td><td>Abnormal condition</td><td>Fibrosis, stenosis</td><td>Pathological states</td></tr>
+            <tr><td>-iasis</td><td>Condition, presence of</td><td>Cholelithiasis, psoriasis</td><td>Disease presence</td></tr>
+            <tr><td>-ectomy</td><td>Surgical removal</td><td>Appendectomy, cholecystectomy</td><td>Complete removal</td></tr>
+            <tr><td>-otomy</td><td>Surgical incision</td><td>Tracheotomy, laparotomy</td><td>Cutting into</td></tr>
+            <tr><td>-ostomy</td><td>Surgical opening</td><td>Colostomy, tracheostomy</td><td>Creating opening</td></tr>
+            <tr><td>-plasty</td><td>Surgical repair</td><td>Rhinoplasty, angioplasty</td><td>Reconstructive</td></tr>
+            <tr><td>-ology</td><td>Study of</td><td>Cardiology, dermatology</td><td>Medical specialties</td></tr>
+            <tr><td>-ologist</td><td>Specialist in</td><td>Cardiologist, dermatologist</td><td>Healthcare providers</td></tr>
+            <tr><td>-scopy</td><td>Visual examination</td><td>Colonoscopy, laparoscopy</td><td>Diagnostic procedures</td></tr>
+            <tr><td>-graphy</td><td>Process of recording</td><td>Radiography, echocardiography</td><td>Imaging studies</td></tr>
+            <tr><td>-gram</td><td>Record, image</td><td>Electrocardiogram, mammogram</td><td>Test results</td></tr>
+            <tr><td>-pathy</td><td>Disease</td><td>Cardiomyopathy, neuropathy</td><td>Disease conditions</td></tr>
+            <tr><td>-megaly</td><td>Enlargement</td><td>Cardiomegaly, hepatomegaly</td><td>Organ enlargement</td></tr>
+            <tr><td>-stenosis</td><td>Narrowing</td><td>Aortic stenosis</td><td>Structural narrowing</td></tr>
+            <tr><td>-emia</td><td>Blood condition</td><td>Anemia, hyperglycemia</td><td>Blood disorders</td></tr>
+            <tr><td>-uria</td><td>Urine condition</td><td>Hematuria, proteinuria</td><td>Urinary findings</td></tr>
+            <tr><td>-pnea</td><td>Breathing</td><td>Dyspnea, apnea</td><td>Respiratory conditions</td></tr>
+            <tr><td>-phasia</td><td>Speech</td><td>Dysphasia, aphasia</td><td>Communication disorders</td></tr>
+            <tr><td>-trophy</td><td>Development, nourishment</td><td>Atrophy, hypertrophy</td><td>Growth changes</td></tr>
+            <tr><td>-lysis</td><td>Breakdown, destruction</td><td>Hemolysis, dialysis</td><td>Destructive processes</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- BODY ORGANIZATION -->
+<div class="chapter-separator"></div>
+<div class="main-header">
+    <h1>🧍 Human Body Organization & Reference Systems</h1>
+</div>
+<div class="term-card-section">
+    <h2>Organization Levels: Cell → Tissue → Organ → System → Organism</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Level</th><th>Description</th><th>Examples</th><th>Function</th></tr></thead>
+        <tbody>
+            <tr><td>Cells</td><td>Basic unit of life</td><td>Muscle cells, nerve cells</td><td>Fundamental building blocks</td></tr>
+            <tr><td>Tissues</td><td>Groups of similar cells</td><td>Epithelial, connective, muscle, nervous</td><td>Specialized functions</td></tr>
+            <tr><td>Organs</td><td>Multiple tissue types</td><td>Heart, liver, kidneys, brain</td><td>Complex operations</td></tr>
+            <tr><td>Systems</td><td>Groups of organs</td><td>Cardiovascular, digestive, respiratory</td><td>Body-wide coordination</td></tr>
+            <tr><td>Organism</td><td>Complete living system</td><td>Human body</td><td>Survival and function</td></tr>
+        </tbody>
+    </table>
+    <h2>Anatomical Reference Framework</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Concept</th><th>Description</th><th>Clinical Application</th></tr></thead>
+        <tbody>
+            <tr><td>Anatomical Position</td><td>Standing upright, arms at sides, palms forward, feet parallel</td><td>Standard reference for all descriptions</td></tr>
+            <tr><td>Sagittal Plane</td><td>Divides body into left and right</td><td>Used for side-view imaging</td></tr>
+            <tr><td>Frontal Plane</td><td>Divides body into front and back</td><td>Used for front-view imaging</td></tr>
+            <tr><td>Transverse Plane</td><td>Divides body into upper and lower</td><td>Used for cross-sectional imaging</td></tr>
+        </tbody>
+    </table>
+    <h2>Directional Terms</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Term</th><th>Meaning</th><th>Opposite</th><th>Example</th><th>Memory Trick</th></tr></thead>
+        <tbody>
+            <tr><td>Anterior/Ventral</td><td>Front of body</td><td>Posterior</td><td>Stomach is anterior to spine</td><td>"Anterior = in front"</td></tr>
+            <tr><td>Posterior/Dorsal</td><td>Back of body</td><td>Anterior</td><td>Spine is posterior to stomach</td><td>"Posterior = back"</td></tr>
+            <tr><td>Superior/Cephalic</td><td>Above/toward head</td><td>Inferior</td><td>Lungs are superior to diaphragm</td><td>"Superior = up high"</td></tr>
+            <tr><td>Inferior/Caudal</td><td>Below/toward feet</td><td>Superior</td><td>Stomach is inferior to lungs</td><td>"Inferior = down low"</td></tr>
+            <tr><td>Medial</td><td>Toward midline</td><td>Lateral</td><td>Heart is medial to lungs</td><td>"Medial = middle"</td></tr>
+            <tr><td>Lateral</td><td>Away from midline</td><td>Medial</td><td>Arms are lateral to chest</td><td>"Lateral = to the side"</td></tr>
+            <tr><td>Proximal</td><td>Closer to attachment</td><td>Distal</td><td>Shoulder is proximal to elbow</td><td>"Proximal = proximity"</td></tr>
+            <tr><td>Distal</td><td>Farther from attachment</td><td>Proximal</td><td>Hand is distal to elbow</td><td>"Distal = distant"</td></tr>
+            <tr><td>Superficial</td><td>Near surface</td><td>Deep</td><td>Skin is superficial to muscle</td><td>"Superficial = surface"</td></tr>
+            <tr><td>Deep</td><td>Far from surface</td><td>Superficial</td><td>Bone is deep to skin</td><td>"Deep = interior"</td></tr>
+        </tbody>
+    </table>
+    <h2>Body Cavities</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Cavity</th><th>Location</th><th>Contains</th><th>Clinical Significance</th></tr></thead>
+        <tbody>
+            <tr><td>Cranial</td><td>Dorsal (back), head</td><td>Brain</td><td>Head injuries, neurological procedures</td></tr>
+            <tr><td>Spinal</td><td>Dorsal (back), vertebral column</td><td>Spinal cord</td><td>Back injuries, spinal procedures</td></tr>
+            <tr><td>Thoracic</td><td>Ventral (front), chest</td><td>Heart, lungs</td><td>Chest X-rays, cardiac procedures</td></tr>
+            <tr><td>Abdominal</td><td>Ventral (front), below thoracic</td><td>Digestive organs</td><td>Abdominal surgery, GI procedures</td></tr>
+            <tr><td>Pelvic</td><td>Ventral (front), below abdominal</td><td>Reproductive, excretory organs</td><td>Gynecological, urological procedures</td></tr>
+        </tbody>
+    </table>
+    <div class="scenario-box">
+        <h4>Clinical Scenario: Describing a Wound</h4>
+        <p>A patient has a deep cut on the front of their lower leg, just above the ankle. Using directional terms, a nurse would describe this as a "deep laceration on the anterior, distal portion of the leg, superior to the ankle." This precise language ensures everyone on the medical team knows the exact location.</p>
+    </div>
+</div>
+
+<!-- CARDIOVASCULAR SYSTEM -->
+<div class="chapter-separator"></div>
+<div class="main-header">
+    <h1>❤️ Advanced: Cardiovascular System</h1>
+</div>
+<div class="term-card-section">
+    <h2>Anatomy, Function & Clinical Correlation</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Structure</th><th>Category</th><th>Function</th><th>Pathology</th><th>Diagnostics</th><th>Treatments</th></tr></thead>
+        <tbody>
+            <tr><td>Heart</td><td>Central pump</td><td>Circulates blood throughout body</td><td>MI, CHF, arrhythmias</td><td>ECG, Echo, stress test</td><td>Medications, surgery, devices</td></tr>
+            <tr><td>Atria</td><td>Upper chambers</td><td>Receive blood (RA: deoxygenated, LA: oxygenated)</td><td>Atrial fibrillation, flutter</td><td>ECG, Holter monitor</td><td>Antiarrhythmics, cardioversion</td></tr>
+            <tr><td>Ventricles</td><td>Lower chambers</td><td>Pump blood (RV: to lungs, LV: to body)</td><td>Ventricular tachycardia, failure</td><td>Echocardiogram, catheterization</td><td>Pacemaker, defibrillator</td></tr>
+            <tr><td>Valves</td><td>One-way gates</td><td>Prevent backflow (tricuspid, pulmonary, mitral, aortic)</td><td>Stenosis, regurgitation, prolapse</td><td>Echo, cardiac cath</td><td>Valve repair/replacement</td></tr>
+            <tr><td>Arteries</td><td>Outbound vessels</td><td>Carry blood away from heart under high pressure</td><td>Atherosclerosis, aneurysm</td><td>Angiography, ultrasound</td><td>Angioplasty, bypass, stents</td></tr>
+            <tr><td>Veins</td><td>Return vessels</td><td>Carry blood toward heart with valves</td><td>Varicose veins, thrombosis</td><td>Venography, ultrasound</td><td>Compression, anticoagulants</td></tr>
+            <tr><td>Capillaries</td><td>Exchange sites</td><td>Oxygen, nutrient, waste exchange</td><td>Capillary fragility</td><td>Microscopic examination</td><td>Supportive care</td></tr>
+            <tr><td>Blood</td><td>Transport medium</td><td>Carries oxygen, nutrients, waste, immune cells</td><td>Anemia, clotting disorders</td><td>CBC, coagulation studies</td><td>Transfusion, medications</td></tr>
+        </tbody>
+    </table>
+    <h2>Cardiovascular Pathology - Disease Spectrum</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Category</th><th>Acute Conditions</th><th>Chronic Conditions</th><th>Emergency Signs</th><th>Treatment Approach</th></tr></thead>
+        <tbody>
+            <tr><td>Coronary Disease</td><td>Myocardial infarction, unstable angina</td><td>Stable angina, atherosclerosis</td><td>Chest pain, shortness of breath</td><td>Immediate: aspirin, oxygen; Long-term: statins, lifestyle</td></tr>
+            <tr><td>Heart Rhythm</td><td>Ventricular fibrillation, SVT</td><td>Atrial fibrillation, heart block</td><td>Palpitations, syncope, chest pain</td><td>Immediate: cardioversion; Long-term: antiarrhythmics, pacemaker</td></tr>
+            <tr><td>Heart Failure</td><td>Acute pulmonary edema</td><td>Chronic heart failure</td><td>Severe shortness of breath, edema</td><td>Immediate: diuretics, oxygen; Long-term: ACE inhibitors, lifestyle</td></tr>
+            <tr><td>Vascular Disease</td><td>Pulmonary embolism, aortic dissection</td><td>Hypertension, peripheral artery disease</td><td>Severe chest/back pain, leg pain</td><td>Immediate: anticoagulation; Long-term: blood pressure control</td></tr>
+            <tr><td>Blood Disorders</td><td>Acute bleeding, DIC</td><td>Anemia, hemophilia</td><td>Severe bleeding, fatigue</td><td>Immediate: transfusion; Long-term: iron supplements, factor replacement</td></tr>
+        </tbody>
+    </table>
+    <h2>Key Terms & Procedures</h2>
+    <div class="term-grid">
+        <div class="term-card"><h4>Myocardial Infarction (MI)</h4><div class="term-display">Heart Attack</div><div class="context"><strong>Breakdown:</strong> My/o(muscle) + cardi(heart) + al(pertaining to) + infarct(death)</div><div class="context"><strong>Context:</strong> Blockage of coronary artery leading to heart muscle death.</div></div>
+        <div class="term-card"><h4>Angioplasty</h4><div class="term-display">Vessel Repair</div><div class="context"><strong>Breakdown:</strong> Angi/o(vessel) + plasty(surgical repair)</div><div class="context"><strong>Context:</strong> Procedure to open narrowed or blocked blood vessels.</div></div>
+        <div class="term-card"><h4>Atherosclerosis</h4><div class="term-display">Artery Hardening</div><div class="context"><strong>Breakdown:</strong> Ather/o(plaque) + scler/o(hard) + osis(condition)</div><div class="context"><strong>Context:</strong> Buildup of plaque in arteries causing narrowing and hardening.</div></div>
+        <div class="term-card"><h4>Arrhythmia</h4><div class="term-display">Irregular Heartbeat</div><div class="context"><strong>Breakdown:</strong> A(without) + rhythm(regular beat)</div><div class="context"><strong>Context:</strong> Abnormal heart rhythm that can be too fast, too slow, or irregular.</div></div>
+    </div>
+    <div class="scenario-box">
+        <h4>Clinical Scenario: Acute Myocardial Infarction (MI)</h4>
+        <p>A 65-year-old male presents to the ER with severe substernal chest pain radiating to his left arm, shortness of breath (dyspnea), and diaphoresis (sweating). An ECG shows ST-segment elevation in the anterior leads, and blood tests reveal elevated troponin levels (indicating myocardial necrosis). The diagnosis is an acute anterior **Myocardial Infarction (MI)**. The patient is immediately given aspirin and oxygen, then rushed to the cardiac catheterization lab for an emergency **coronary angiogram** to visualize the blockage. A **percutaneous coronary intervention (PCI)** with **angioplasty** and stent placement is performed to restore blood flow to the affected coronary artery, preventing further myocardial damage.</p>
+    </div>
+</div>
+
+<!-- DIGESTIVE SYSTEM -->
+<div class="chapter-separator"></div>
+<div class="main-header">
+    <h1>🍽️ Advanced: Digestive System</h1>
+</div>
+<div class="term-card-section">
+    <h2>Digestive Tract Journey & Clinical Correlation</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Organ</th><th>Location</th><th>Primary Function</th><th>Common Pathology</th><th>Diagnostic Methods</th><th>Treatment Options</th></tr></thead>
+        <tbody>
+            <tr><td>Mouth</td><td>Entry point</td><td>Mastication, initial digestion</td><td>Gingivitis, oral thrush</td><td>Visual examination, biopsy</td><td>Antibiotics, antifungals, dental care</td></tr>
+            <tr><td>Esophagus</td><td>Throat to stomach</td><td>Transport food via peristalsis</td><td>GERD, esophagitis, stricture</td><td>Upper endoscopy, barium swallow</td><td>PPIs, dilation, surgery</td></tr>
+            <tr><td>Stomach</td><td>Upper abdomen</td><td>Storage, acid digestion</td><td>Gastritis, ulcers, cancer</td><td>Upper endoscopy, CT scan</td><td>Antibiotics, PPIs, surgery</td></tr>
+            <tr><td>Small Intestine</td><td>Mid-abdomen</td><td>Nutrient absorption</td><td>Celiac disease, Crohn's disease</td><td>Endoscopy, CT enterography</td><td>Anti-inflammatories, dietary changes</td></tr>
+            <tr><td>Large Intestine</td><td>Lower abdomen</td><td>Water absorption, waste formation</td><td>Colitis, diverticulitis, cancer</td><td>Colonoscopy, CT scan</td><td>Antibiotics, surgery, chemotherapy</td></tr>
+            <tr><td>Liver</td><td>Right upper abdomen</td><td>Bile production, detoxification</td><td>Hepatitis, cirrhosis, cancer</td><td>Blood tests, ultrasound, biopsy</td><td>Antivirals, transplant, lifestyle</td></tr>
+            <tr><td>Gallbladder</td><td>Under liver</td><td>Bile storage and concentration</td><td>Gallstones, cholecystitis</td><td>Ultrasound, HIDA scan</td><td>Cholecystectomy, ursodeoxycholic acid</td></tr>
+            <tr><td>Pancreas</td><td>Behind stomach</td><td>Enzyme production, hormone secretion</td><td>Pancreatitis, diabetes, cancer</td><td>CT scan, ERCP, blood tests</td><td>Insulin, enzymes, surgery</td></tr>
+        </tbody>
+    </table>
+    <h2>Digestive System Pathology - Integrated Disease Management</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Category</th><th>Acute Presentations</th><th>Chronic Conditions</th><th>Diagnostic Approach</th><th>Treatment Strategy</th></tr></thead>
+        <tbody>
+            <tr><td>Inflammatory</td><td>Acute gastritis, appendicitis</td><td>IBD, chronic gastritis</td><td>Endoscopy, imaging, blood tests</td><td>Anti-inflammatories, antibiotics, surgery</td></tr>
+            <tr><td>Infectious</td><td>Food poisoning, viral gastroenteritis</td><td>H. pylori infection</td><td>Stool culture, breath test</td><td>Antibiotics, supportive care</td></tr>
+            <tr><td>Obstructive</td><td>Bowel obstruction, gallstone attack</td><td>Structures, adhesions</td><td>CT scan, ultrasound</td><td>Surgery, dilation, dietary changes</td></tr>
+            <tr><td>Functional</td><td>Acute diarrhea</td><td>IBS, gastroparesis</td><td>Symptom assessment, exclusion testing</td><td>Dietary modification, medications</td></tr>
+            <tr><td>Neoplastic</td><td>GI bleeding from tumor</td><td>Colorectal cancer, liver cancer</td><td>Endoscopy, imaging, biopsy</td><td>Surgery, chemotherapy, radiation</td></tr>
+        </tbody>
+    </table>
+    <div class="scenario-box">
+        <h4>Clinical Scenario: Acute Cholecystitis</h4>
+        <p>A 50-year-old female with a history of obesity presents to the ER with severe right upper quadrant (RUQ) abdominal pain that started after eating a fatty meal. Physical examination reveals Murphy's sign (pain with palpation of the RUQ during inspiration). An ultrasound reveals **gallstones** (cholelithiasis) and a thickened gallbladder wall. The diagnosis is **Cholecystitis** (chole/cyst/itis = bile/bladder/inflammation). Laboratory tests show elevated white blood cell count and liver enzymes. The patient is started on IV fluids, antibiotics, and pain management. The recommended treatment is a laparoscopic **Cholecystectomy** (chole/cyst/ectomy = bile/bladder/removal) to surgically remove the inflamed gallbladder and prevent future episodes.</p>
+    </div>
+</div>
+
+<!-- INTEGUMENTARY SYSTEM -->
+<div class="chapter-separator"></div>
+<div class="main-header">
+    <h1>🤚 Advanced: Integumentary System</h1>
+</div>
+<div class="term-card-section">
+    <h2>Skin Structure & Clinical Correlation</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Layer/Structure</th><th>Composition</th><th>Function</th><th>Common Pathology</th><th>Diagnostic Methods</th><th>Treatment Options</th></tr></thead>
+        <tbody>
+            <tr><td>Epidermis</td><td>Keratinocytes, melanocytes</td><td>Protection, waterproofing</td><td>Acne, eczema, skin cancer</td><td>Visual exam, dermoscopy, biopsy</td><td>Topical medications, surgery</td></tr>
+            <tr><td>Dermis</td><td>Collagen, blood vessels, nerves</td><td>Strength, sensation, temperature control</td><td>Cellulitis, abscesses</td><td>Physical exam, imaging</td><td>Antibiotics, drainage</td></tr>
+            <tr><td>Subcutaneous</td><td>Adipose tissue</td><td>Insulation, energy storage</td><td>Lipomas, infections</td><td>Palpation, ultrasound</td><td>Surgery, antibiotics</td></tr>
+            <tr><td>Hair Follicles</td><td>Keratin structures</td><td>Protection, sensation</td><td>Folliculitis, alopecia</td><td>Microscopic exam, biopsy</td><td>Antibiotics, hormonal therapy</td></tr>
+            <tr><td>Sebaceous Glands</td><td>Oil-producing cells</td><td>Lubrication</td><td>Acne, seborrhea</td><td>Visual exam</td><td>Retinoids, antibiotics</td></tr>
+            <tr><td>Sweat Glands</td><td>Eccrine and apocrine</td><td>Temperature regulation</td><td>Hyperhidrosis, infections</td><td>Clinical assessment</td><td>Antiperspirants, surgery</td></tr>
+            <tr><td>Nails</td><td>Keratin plates</td><td>Protection, fine motor skills</td><td>Fungal infections, ingrown nails</td><td>KOH prep, culture</td><td>Antifungals, surgery</td></tr>
+        </tbody>
+    </table>
+    <h2>Integumentary Pathology - Disease Spectrum & Management</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Category</th><th>Acute Conditions</th><th>Chronic Conditions</th><th>Diagnostic Approach</th><th>Treatment Strategy</th></tr></thead>
+        <tbody>
+            <tr><td>Infectious</td><td>Cellulitis, impetigo</td><td>Chronic fungal infections</td><td>Culture, microscopy</td><td>Antibiotics, antifungals</td></tr>
+            <tr><td>Inflammatory</td><td>Contact dermatitis, burns</td><td>Eczema, psoriasis</td><td>Patch testing, biopsy</td><td>Topical steroids, immunosuppressants</td></tr>
+            <tr><td>Neoplastic</td><td>Suspicious moles</td><td>Skin cancers</td><td>Dermoscopy, biopsy</td><td>Surgery, radiation, chemotherapy</td></tr>
+            <tr><td>Traumatic</td><td>Lacerations, burns</td><td>Chronic wounds, scars</td><td>Visual assessment, imaging</td><td>Wound care, surgery, grafting</td></tr>
+            <tr><td>Autoimmune</td><td>Acute flares</td><td>Lupus, scleroderma</td><td>Blood tests, biopsy</td><td>Immunosuppressants, supportive care</td></tr>
+        </tbody>
+    </table>
+    <div class="scenario-box">
+        <h4>Clinical Scenario: Fungal Nail Infection</h4>
+        <p>A 60-year-old patient complains of a thickened, yellow, and brittle toenail that has been worsening over 6 months. The patient also reports recent nail discoloration and separation from the nail bed. A sample is taken for a KOH prep (potassium hydroxide preparation) and fungal culture, which confirms a dermatophyte infection. The diagnosis is **Onychomycosis** (onycho/myc/osis = nail/fungus/abnormal condition). Treatment options include topical antifungal agents (terbinafine, amorolfine) applied directly to the nail, or oral antifungal medications (terbinafine, itraconazole) for systemic treatment. In severe cases, the nail may need to be surgically removed to allow topical antifungals to penetrate the nail bed.</p>
+    </div>
+</div>
+
+<!-- ENDOCRINE SYSTEM -->
+<div class="chapter-separator"></div>
+<div class="main-header">
+    <h1>🔬 Advanced: Endocrine System</h1>
+</div>
+<div class="term-card-section">
+    <h2>Glandular Network & Clinical Correlation</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Gland</th><th>Location</th><th>Hormones Produced</th><th>Target Function</th><th>Pathology</th><th>Diagnostics</th><th>Treatments</th></tr></thead>
+        <tbody>
+            <tr><td>Pituitary</td><td>Brain base</td><td>ACTH, TSH, GH, FSH, LH, ADH, oxytocin</td><td>Controls other glands</td><td>Adenomas, hormone deficiencies</td><td>Hormone levels, MRI</td><td>Surgery, hormone replacement</td></tr>
+            <tr><td>Thyroid</td><td>Neck</td><td>T3, T4, calcitonin</td><td>Metabolism, calcium regulation</td><td>Hyper/hypothyroidism, cancer</td><td>TSH, T3/T4, ultrasound</td><td>Medications, surgery, radioiodine</td></tr>
+            <tr><td>Parathyroid</td><td>Behind thyroid</td><td>PTH</td><td>Calcium regulation</td><td>Hyper/hypoparathyroidism</td><td>Calcium, PTH levels</td><td>Surgery, calcium supplements</td></tr>
+            <tr><td>Adrenals</td><td>Above kidneys</td><td>Cortisol, aldosterone, epinephrine</td><td>Stress response, electrolyte balance</td><td>Addison's, Cushing's</td><td>Cortisol levels, imaging</td><td>Steroids, surgery</td></tr>
+            <tr><td>Pancreas</td><td>Behind stomach</td><td>Insulin, glucagon</td><td>Blood glucose regulation</td><td>Diabetes mellitus</td><td>Glucose, A1c, C-peptide</td><td>Insulin, oral medications, lifestyle</td></tr>
+            <tr><td>Gonads</td><td>Pelvis</td><td>Estrogen, progesterone, testosterone</td><td>Sexual development, reproduction</td><td>Hormone deficiencies</td><td>Hormone levels, imaging</td><td>Hormone replacement</td></tr>
+            <tr><td>Thymus</td><td>Chest</td><td>Thymosin</td><td>Immune system development</td><td>Myasthenia gravis</td><td>Antibody tests, imaging</td><td>Immunosuppressants, surgery</td></tr>
+        </tbody>
+    </table>
+    <h2>Endocrine Pathology - Integrated Disease Management</h2>
+    <table class="comparison-table">
+        <thead><tr><th>System</th><th>Hyperfunction</th><th>Hypofunction</th><th>Emergency Conditions</th><th>Diagnostic Strategy</th><th>Treatment Approach</th></tr></thead>
+        <tbody>
+            <tr><td>Thyroid</td><td>Hyperthyroidism, Graves' disease</td><td>Hypothyroidism, Hashimoto's</td><td>Thyroid storm, myxedema coma</td><td>TSH, free T4, antibodies</td><td>Antithyroid drugs, surgery, radioiodine</td></tr>
+            <tr><td>Adrenal</td><td>Cushing's syndrome</td><td>Addison's disease</td><td>Adrenal crisis</td><td>Cortisol, ACTH stimulation test</td><td>Steroids, surgery</td></tr>
+            <tr><td>Pancreatic</td><td>Insulinoma</td><td>Diabetes mellitus</td><td>DKA, hypoglycemic coma</td><td>Glucose, A1c, insulin levels</td><td>Insulin, oral medications, lifestyle</td></tr>
+            <tr><td>Parathyroid</td><td>Hyperparathyroidism</td><td>Hypoparathyroidism</td><td>Severe hypercalcemia, tetany</td><td>Calcium, PTH levels</td><td>Surgery, calcium supplements, vitamin D</td></tr>
+            <tr><td>Pituitary</td><td>Acromegaly, prolactinoma</td><td>Hypopituitarism</td><td>Pituitary apoplexy</td><td>Hormone panels, MRI</td><td>Surgery, medications</td></tr>
+        </tbody>
+    </table>
+    <div class="scenario-box">
+        <h4>Clinical Scenario: Diabetic Ketoacidosis (DKA)</h4>
+        <p>A 28-year-old type 1 diabetic patient is brought to the ER with confusion, rapid breathing (Kussmaul respirations), fruity-smelling breath, and severe abdominal pain. Blood tests show a glucose level of 450 mg/dL, arterial pH of 7.1 (severe acidosis), and elevated ketone bodies. This is a classic presentation of **Diabetic Ketoacidosis (DKA)**, a life-threatening emergency. The underlying cause is **Hypoglycemia** (hypo- = low, glyc/o = sugar, -emia = blood condition) - wait, actually this is **Hyperglycemia** (hyper- = high, glyc/o = sugar, -emia = blood condition) with metabolic acidosis. The patient is treated with intravenous insulin, aggressive fluid resuscitation, and electrolyte replacement to correct the acidosis and bring blood glucose under control.</p>
+    </div>
+</div>
+
+<!-- NERVOUS SYSTEM -->
+<div class="chapter-separator"></div>
+<div class="main-header">
+    <h1>🧠 Advanced: Nervous System</h1>
+</div>
+<div class="term-card-section">
+    <h2>Nervous System Organization & Clinical Correlation</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Division</th><th>Components</th><th>Function</th><th>Common Pathology</th><th>Diagnostics</th><th>Treatments</th></tr></thead>
+        <tbody>
+            <tr><td>Central Nervous System (CNS)</td><td>Brain, spinal cord</td><td>Processing, control center</td><td>Stroke, TBI, MS, Parkinson's</td><td>MRI, CT, lumbar puncture</td><td>Medications, therapy, surgery</td></tr>
+            <tr><td>Peripheral Nervous System (PNS)</td><td>Nerves, ganglia</td><td>Communication, sensation, movement</td><td>Neuropathy, nerve compression</td><td>EMG, nerve conduction studies</td><td>Physical therapy, medications</td></tr>
+            <tr><td>Somatic</td><td>Voluntary nerves</td><td>Conscious movement, sensation</td><td>Paralysis, numbness</td><td>Neurological exam, imaging</td><td>Rehabilitation, medications</td></tr>
+            <tr><td>Autonomic</td><td>Involuntary nerves</td><td>Heart rate, digestion, blood pressure</td><td>Dysautonomia, neuropathy</td><td>Tilt table test, blood pressure monitoring</td><td>Medications, lifestyle modifications</td></tr>
+        </tbody>
+    </table>
+    <div class="scenario-box">
+        <h4>Clinical Scenario: Acute Ischemic Stroke</h4>
+        <p>A 72-year-old patient with hypertension presents to the ER with sudden onset of facial drooping, arm weakness, and speech difficulty (dysphasia). The patient's last known normal time was 2 hours ago. A stat CT head shows no hemorrhage. An MRI with diffusion imaging confirms an acute ischemic stroke in the middle cerebral artery (MCA) territory. The diagnosis is an acute **Cerebrovascular Accident (CVA)** or **Stroke** (ischemic type). The patient is a candidate for **thrombolysis** with tissue plasminogen activator (tPA) to dissolve the clot and restore blood flow. Time is critical - "time is brain" - as every minute of ischemia results in neuronal death.</p>
+    </div>
+</div>
+
+<!-- RESPIRATORY SYSTEM -->
+<div class="chapter-separator"></div>
+<div class="main-header">
+    <h1>💨 Advanced: Respiratory System</h1>
+</div>
+<div class="term-card-section">
+    <h2>Respiratory Tract Organization & Clinical Correlation</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Structure</th><th>Location</th><th>Function</th><th>Common Pathology</th><th>Diagnostics</th><th>Treatments</th></tr></thead>
+        <tbody>
+            <tr><td>Nose/Nasal Cavity</td><td>Entry point</td><td>Air filtration, warming, humidification</td><td>Rhinitis, polyps, sinusitis</td><td>Nasal endoscopy, CT sinus</td><td>Antihistamines, decongestants, surgery</td></tr>
+            <tr><td>Pharynx</td><td>Throat</td><td>Passage for air and food</td><td>Pharyngitis, tonsillitis</td><td>Visual exam, throat culture</td><td>Antibiotics, supportive care</td></tr>
+            <tr><td>Larynx</td><td>Voice box</td><td>Voice production, airway protection</td><td>Laryngitis, vocal cord dysfunction</td><td>Laryngoscopy</td><td>Voice rest, medications</td></tr>
+            <tr><td>Trachea</td><td>Windpipe</td><td>Conduct air to lungs</td><td>Tracheitis, stenosis</td><td>Chest X-ray, bronchoscopy</td><td>Antibiotics, surgery</td></tr>
+            <tr><td>Bronchi/Bronchioles</td><td>Lung branches</td><td>Distribute air throughout lungs</td><td>Bronchitis, asthma</td><td>Chest X-ray, spirometry</td><td>Bronchodilators, corticosteroids</td></tr>
+            <tr><td>Alveoli</td><td>Lung sacs</td><td>Gas exchange (O2 in, CO2 out)</td><td>Pneumonia, ARDS, emphysema</td><td>Chest X-ray, CT, ABG</td><td>Antibiotics, oxygen, ventilation</td></tr>
+        </tbody>
+    </table>
+    <div class="scenario-box">
+        <h4>Clinical Scenario: Community-Acquired Pneumonia</h4>
+        <p>A 55-year-old patient with COPD presents with cough, fever, and dyspnea (difficulty breathing). Chest X-ray shows a left lower lobe infiltrate. Sputum culture is pending. The diagnosis is **Pneumonia** (pneum/o = lung, -ia = condition). The patient is started on broad-spectrum antibiotics (covering common respiratory pathogens like Streptococcus pneumoniae and Haemophilus influenzae) and supplemental oxygen to maintain adequate oxygenation. The condition **Hypoxemia** (hypo- = low, ox = oxygen, -emia = blood condition) is corrected with oxygen therapy.</p>
+    </div>
+</div>
+
+<!-- URINARY SYSTEM -->
+<div class="chapter-separator"></div>
+<div class="main-header">
+    <h1>💧 Advanced: Urinary System</h1>
+</div>
+<div class="term-card-section">
+    <h2>Urinary System Organization & Clinical Correlation</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Structure</th><th>Location</th><th>Function</th><th>Common Pathology</th><th>Diagnostics</th><th>Treatments</th></tr></thead>
+        <tbody>
+            <tr><td>Kidneys</td><td>Retroperitoneal, both sides</td><td>Filter blood, produce urine</td><td>Nephritis, nephrotic syndrome, renal failure</td><td>Urinalysis, creatinine, ultrasound</td><td>Medications, dialysis, transplant</td></tr>
+            <tr><td>Ureters</td><td>Abdomen to bladder</td><td>Transport urine to bladder</td><td>Ureteral obstruction, stenosis</td><td>CT urography, ultrasound</td><td>Surgery, stent placement</td></tr>
+            <tr><td>Bladder</td><td>Pelvis</td><td>Store urine</td><td>Cystitis, overactive bladder, cancer</td><td>Urinalysis, cystoscopy, ultrasound</td><td>Antibiotics, medications, surgery</td></tr>
+            <tr><td>Urethra</td><td>Pelvis to external</td><td>Conduct urine out of body</td><td>Urethritis, stricture</td><td>Urinalysis, urethrography</td><td>Antibiotics, dilation, surgery</td></tr>
+        </tbody>
+    </table>
+    <div class="scenario-box">
+        <h4>Clinical Scenario: Acute Kidney Injury (AKI)</h4>
+        <p>A 70-year-old patient with sepsis from pneumonia presents with decreased urine output (oliguria), elevated serum creatinine (2.8 mg/dL, baseline 1.0), and elevated BUN (45 mg/dL). The diagnosis is **Acute Kidney Injury (AKI)**, formerly called acute renal failure. The underlying cause is sepsis-induced hypotension leading to **acute tubular necrosis (ATN)**. The patient requires aggressive fluid resuscitation, antibiotics for the underlying infection, and close monitoring of electrolytes. If kidney function does not recover, the patient may require **hemodialysis** (hemo = blood, dialysis = separation) to remove excess fluid and waste products.</p>
+    </div>
+</div>
+
+<!-- MUSCULOSKELETAL SYSTEM -->
+<div class="chapter-separator"></div>
+<div class="main-header">
+    <h1>🦴 Advanced: Musculoskeletal System</h1>
+</div>
+<div class="term-card-section">
+    <h2>Musculoskeletal Organization & Clinical Correlation</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Component</th><th>Composition</th><th>Function</th><th>Common Pathology</th><th>Diagnostics</th><th>Treatments</th></tr></thead>
+        <tbody>
+            <tr><td>Bones</td><td>Mineralized connective tissue</td><td>Support, protection, mineral storage</td><td>Fractures, osteoporosis, cancer</td><td>X-ray, CT, DEXA scan</td><td>Immobilization, surgery, medications</td></tr>
+            <tr><td>Joints</td><td>Articulations between bones</td><td>Movement, flexibility</td><td>Arthritis, dislocation, ligament tears</td><td>X-ray, MRI, arthroscopy</td><td>Physical therapy, medications, surgery</td></tr>
+            <tr><td>Muscles</td><td>Contractile tissue</td><td>Movement, heat production</td><td>Myopathy, myositis, strain</td><td>EMG, muscle biopsy, MRI</td><td>Physical therapy, medications, rest</td></tr>
+            <tr><td>Ligaments</td><td>Fibrous connective tissue</td><td>Stabilize joints</td><td>Sprains, tears</td><td>Physical exam, MRI</td><td>Rest, ice, compression, elevation, surgery</td></tr>
+            <tr><td>Tendons</td><td>Fibrous connective tissue</td><td>Attach muscle to bone</td><td>Tendinitis, rupture</td><td>Ultrasound, MRI</td><td>Rest, physical therapy, surgery</td></tr>
+        </tbody>
+    </table>
+    <div class="scenario-box">
+        <h4>Clinical Scenario: Osteoarthritis of the Knee</h4>
+        <p>A 68-year-old patient with a history of knee injury presents with chronic knee pain, stiffness, and swelling. Physical examination reveals crepitus (grinding sensation) and limited range of motion. X-rays show joint space narrowing and osteophyte (bone spur) formation. The diagnosis is **Osteoarthritis (OA)** of the knee (oste/o = bone, arthr = joint, itis = inflammation). This is a **degenerative joint disease** characterized by loss of articular cartilage. Treatment includes weight loss, physical therapy, anti-inflammatory medications (NSAIDs), and intra-articular steroid injections. In severe cases, **total knee arthroplasty (TKA)** (arthro = joint, plasty = surgical repair) may be considered to replace the damaged joint with a prosthetic.</p>
+    </div>
+</div>
+
+<!-- DIAGNOSTIC PROCEDURES -->
+<div class="chapter-separator"></div>
+<div class="main-header">
+    <h1>🩺 Comprehensive Diagnostic Procedures</h1>
+</div>
+<div class="term-card-section">
+    <h2>Universal Diagnostic Framework</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Category</th><th>Procedures</th><th>Purpose</th><th>Body Systems</th><th>Clinical Applications</th></tr></thead>
+        <tbody>
+            <tr><td>Physical Examination</td><td>Inspection, palpation, percussion, auscultation</td><td>Direct assessment</td><td>All systems</td><td>Initial evaluation, monitoring</td></tr>
+            <tr><td>Laboratory Testing</td><td>Blood, urine, tissue analysis</td><td>Chemical/cellular analysis</td><td>All systems</td><td>Diagnosis, monitoring, screening</td></tr>
+            <tr><td>Imaging Studies</td><td>X-ray, CT, MRI, ultrasound</td><td>Structural visualization</td><td>All systems</td><td>Diagnosis, staging, follow-up</td></tr>
+            <tr><td>Endoscopic Procedures</td><td>Direct visualization with scopes</td><td>Internal examination</td><td>GI, respiratory, urinary</td><td>Diagnosis, biopsy, treatment</td></tr>
+            <tr><td>Functional Testing</td><td>Stress tests, pulmonary function</td><td>Organ performance</td><td>Cardiovascular, respiratory</td><td>Functional assessment</td></tr>
+            <tr><td>Biopsy Procedures</td><td>Tissue sampling</td><td>Histological diagnosis</td><td>All systems</td><td>Cancer diagnosis, disease staging</td></tr>
+        </tbody>
+    </table>
+    <h2>Integrated Laboratory Testing</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Test Category</th><th>Specific Tests</th><th>What They Measure</th><th>Clinical Significance</th><th>Normal Ranges</th></tr></thead>
+        <tbody>
+            <tr><td>Complete Blood Count (CBC)</td><td>WBC, RBC, Hgb, Hct, platelets</td><td>Blood cell quantities and quality</td><td>Infection, anemia, bleeding disorders</td><td>WBC: 4,500-11,000; RBC: 4.5-5.5M; Hgb: 12-16 g/dL</td></tr>
+            <tr><td>Basic Metabolic Panel (BMP)</td><td>Glucose, electrolytes, kidney function</td><td>Body chemistry balance</td><td>Diabetes, kidney disease, dehydration</td><td>Glucose: 70-100 mg/dL; Na: 136-145 mEq/L</td></tr>
+            <tr><td>Liver Function Tests (LFTs)</td><td>ALT, AST, bilirubin, albumin</td><td>Liver health and function</td><td>Hepatitis, cirrhosis, drug toxicity</td><td>ALT: 7-56 U/L; AST: 7-56 U/L</td></tr>
+            <tr><td>Cardiac Markers</td><td>Troponin, CK-MB, BNP</td><td>Heart muscle damage</td><td>Heart attack, heart failure</td><td>Troponin: <0.04 ng/mL</td></tr>
+            <tr><td>Thyroid Function</td><td>TSH, T3, T4</td><td>Thyroid hormone levels</td><td>Hyper/hypothyroidism</td><td>TSH: 0.4-4.0 mIU/L; T4: 5-12 mcg/dL</td></tr>
+            <tr><td>Lipid Profile</td><td>Total cholesterol, HDL, LDL, triglycerides</td><td>Cardiovascular risk</td><td>Heart disease risk assessment</td><td>Total cholesterol: <200 mg/dL</td></tr>
+            <tr><td>Urinalysis</td><td>Protein, glucose, blood, bacteria</td><td>Kidney and urinary tract health</td><td>UTI, kidney disease, diabetes</td><td>Protein: negative; Glucose: negative</td></tr>
+        </tbody>
+    </table>
+    <h2>Advanced Imaging Integration</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Imaging Type</th><th>Technology</th><th>Best For</th><th>Advantages</th><th>Limitations</th><th>Clinical Uses</th></tr></thead>
+        <tbody>
+            <tr><td>X-ray</td><td>Ionizing radiation</td><td>Bones, chest, abdomen</td><td>Quick, inexpensive, portable</td><td>Limited soft tissue detail, radiation</td><td>Fractures, pneumonia, bowel obstruction</td></tr>
+            <tr><td>CT Scan</td><td>X-ray with computer</td><td>Cross-sectional anatomy</td><td>Detailed images, fast, 3D reconstruction</td><td>Radiation exposure, contrast allergy</td><td>Trauma, cancer staging, stroke</td></tr>
+            <tr><td>MRI</td><td>Magnetic field and radio waves</td><td>Soft tissues, brain, spine</td><td>No radiation, excellent detail, multiplanar</td><td>Expensive, time-consuming, contraindications</td><td>Brain tumors, spinal injuries, ligament tears</td></tr>
+            <tr><td>Ultrasound</td><td>Sound waves</td><td>Moving structures, pregnancy</td><td>Safe, real-time, no radiation</td><td>Operator-dependent, limited by body habitus</td><td>Pregnancy, gallstones, cardiac function</td></tr>
+            <tr><td>Nuclear Medicine</td><td>Radioactive tracers</td><td>Organ function</td><td>Functional information, sensitive</td><td>Radiation, delayed imaging</td><td>Bone scans, thyroid function, cardiac perfusion</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- KEY ABBREVIATIONS -->
+<div class="chapter-separator"></div>
+<div class="main-header">
+    <h1>📋 Key Abbreviations Reference</h1>
+</div>
+<div class="term-card-section">
+    <h2>Cardiovascular Abbreviations</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Abbreviation</th><th>Full Term</th><th>Definition</th></tr></thead>
+        <tbody>
+            <tr><td>MI</td><td>Myocardial Infarction</td><td>Heart attack</td></tr>
+            <tr><td>CHF</td><td>Congestive Heart Failure</td><td>Heart unable to pump effectively</td></tr>
+            <tr><td>CAD</td><td>Coronary Artery Disease</td><td>Narrowing of coronary arteries</td></tr>
+            <tr><td>HTN</td><td>Hypertension</td><td>High blood pressure</td></tr>
+            <tr><td>A-fib</td><td>Atrial Fibrillation</td><td>Irregular heart rhythm</td></tr>
+            <tr><td>PVD</td><td>Peripheral Vascular Disease</td><td>Narrowing of peripheral arteries</td></tr>
+            <tr><td>ECG/EKG</td><td>Electrocardiogram</td><td>Heart electrical activity recording</td></tr>
+            <tr><td>Echo</td><td>Echocardiogram</td><td>Heart ultrasound</td></tr>
+        </tbody>
+    </table>
+    <h2>Digestive System Abbreviations</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Abbreviation</th><th>Full Term</th><th>Definition</th></tr></thead>
+        <tbody>
+            <tr><td>GI</td><td>Gastrointestinal</td><td>Stomach and intestines</td></tr>
+            <tr><td>GERD</td><td>Gastroesophageal Reflux Disease</td><td>Acid reflux</td></tr>
+            <tr><td>PUD</td><td>Peptic Ulcer Disease</td><td>Stomach or duodenal ulcers</td></tr>
+            <tr><td>IBD</td><td>Inflammatory Bowel Disease</td><td>Crohn's disease or ulcerative colitis</td></tr>
+            <tr><td>IBS</td><td>Irritable Bowel Syndrome</td><td>Functional bowel disorder</td></tr>
+            <tr><td>N&V</td><td>Nausea and Vomiting</td><td>Stomach distress</td></tr>
+            <tr><td>EGD</td><td>Esophagogastroduodenoscopy</td><td>Upper GI scope</td></tr>
+            <tr><td>ERCP</td><td>Endoscopic Retrograde Cholangiopancreatography</td><td>Bile duct scope</td></tr>
+        </tbody>
+    </table>
+    <h2>Endocrine Abbreviations</h2>
+    <table class="comparison-table">
+        <thead><tr><th>Abbreviation</th><th>Full Term</th><th>Definition</th></tr></thead>
+        <tbody>
+            <tr><td>DM</td><td>Diabetes Mellitus</td><td>Blood sugar disorder</td></tr>
+            <tr><td>DKA</td><td>Diabetic Ketoacidosis</td><td>Severe diabetes complication</td></tr>
+            <tr><td>HHS</td><td>Hyperosmolar Hyperglycemic State</td><td>Severe hyperglycemia</td></tr>
+            <tr><td>TSH</td><td>Thyroid Stimulating Hormone</td><td>Pituitary hormone</td></tr>
+            <tr><td>T3/T4</td><td>Thyroid Hormones</td><td>Metabolism regulators</td></tr>
+            <tr><td>A1c</td><td>Hemoglobin A1c</td><td>3-month average blood sugar</td></tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
